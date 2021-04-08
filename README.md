@@ -1,6 +1,16 @@
 # Quick Astra Demo
-### Quick public demo on Astra &amp; Stargate REST API
-[Sign up and download Postman here](https://identity.getpostman.com/signup?continue=https%3A%2F%2Fgo.postman.co%2Fbuild) (you'll only have to do this once)
+Quick public demo on Astra &amp; Stargate REST API
+## Similar cqlsh Commands
+```sql
+USE {keyspace_name}
+EXPAND ON
+SELECT * FROM movies_and_tv LIMIT 10;
+```
+
+## Environment Setup
+These steps will just need to be done the first time.
+When you run your demos you will skip down to the `Run Your Demo` section
+- [Sign up and download Postman here](https://identity.getpostman.com/signup?continue=https%3A%2F%2Fgo.postman.co%2Fbuild) (you'll only have to do this once)
 - Click Import
 ![](./screens/01_step.png)
 
@@ -24,7 +34,7 @@ https://raw.githubusercontent.com/jamesc127/quick-stargate-demo/main/postman/qui
 ![](./screens/06_step.png)
 ![](./screens/08_step.png)
 
-
+## Run Your Demo
 - Copy your cluster ID
 ![](./screens/09_step.png)
 
