@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "23bb6da8-bcf0-4f92-81c6-ab5d3f8e1bfb",
+		"name": "quick-astra-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get A Movie",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Cassandra-Token",
+						"value": "{{token}}",
+						"description": "Auth API User in Astra",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{clusterID}}-{{region}}.apps.astra.datastax.com/api/rest/v2/keyspaces/{{keyspace}}/movies_and_tv?where={\"show_id\":{\"$eq\":\"70044605\"}}",
+					"protocol": "https",
+					"host": [
+						"{{clusterID}}-{{region}}",
+						"apps",
+						"astra",
+						"datastax",
+						"com"
+					],
+					"path": [
+						"api",
+						"rest",
+						"v2",
+						"keyspaces",
+						"{{keyspace}}",
+						"movies_and_tv"
+					],
+					"query": [
+						{
+							"key": "where",
+							"value": "{\"show_id\":{\"$eq\":\"70044605\"}}"
+						},
+						{
+							"key": "page-size",
+							"value": "10",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
